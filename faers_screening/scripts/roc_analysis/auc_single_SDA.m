@@ -8,8 +8,7 @@ rng default;
 stats = {'PRR','EBGM','Q_0025logIC'};
 
 % Resource union
-union_clt_tbl = singledrugresourceunionscores(:,{'No','SOURCE','PRR', ...
-    'EBGM','Q_0025logIC','indicator', 'N'});
+union_clt_tbl = singledrugresourceunionscores(:,{'No','SOURCE','PRR', 'EBGM','Q_0025logIC','indicator', 'N'});
 
 union_AUC_vector = zeros(size(stats,1),3);
 
