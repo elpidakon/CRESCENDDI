@@ -36,21 +36,29 @@ neg_counts_datafile <- "faers_screening/data/DR2_FAERS_COUNTS.xlsx"
 pos_ctls_tbl <- read_excel(pos_counts_datafile)
 pos_ctls_tbl$dde_tuple_copy <- pos_ctls_tbl$dde_tuple
 # Remove the first and last character and split concept_ids to separate columns
-pos_ctls_tbl$dde_tuple_copy <- substr(pos_ctls_tbl$dde_tuple_copy, 2, 
-                                      nchar(pos_ctls_tbl$dde_tuple_copy) - 1)
+pos_ctls_tbl$dde_tuple_copy <- substr(
+  pos_ctls_tbl$dde_tuple_copy, 2,
+  nchar(pos_ctls_tbl$dde_tuple_copy) - 1
+)
 pos_ctls_tbl <- pos_ctls_tbl %>%
-  separate(dde_tuple_copy, c("DRUG_1_CONCEPT_ID", "DRUG_2_CONCEPT_ID", 
-                             "EVENT_CONCEPT_ID"), sep = ", ")
+  separate(dde_tuple_copy, c(
+    "DRUG_1_CONCEPT_ID", "DRUG_2_CONCEPT_ID",
+    "EVENT_CONCEPT_ID"
+  ), sep = ", ")
 pos_ctls_tbl$indicator <- 1
 # Negative controls
 neg_ctls_tbl <- read_excel(neg_counts_datafile)
 neg_ctls_tbl$dde_tuple_copy <- neg_ctls_tbl$dde_tuple
 # Remove the first and last character and split concept_ids to separate columns
-neg_ctls_tbl$dde_tuple_copy <- substr(neg_ctls_tbl$dde_tuple_copy, 2, 
-                                      nchar(neg_ctls_tbl$dde_tuple_copy) - 1)
+neg_ctls_tbl$dde_tuple_copy <- substr(
+  neg_ctls_tbl$dde_tuple_copy, 2,
+  nchar(neg_ctls_tbl$dde_tuple_copy) - 1
+)
 neg_ctls_tbl <- neg_ctls_tbl %>%
-  separate(dde_tuple_copy, c("DRUG_1_CONCEPT_ID", "DRUG_2_CONCEPT_ID", 
-                             "EVENT_CONCEPT_ID"), sep = ", ")
+  separate(dde_tuple_copy, c(
+    "DRUG_1_CONCEPT_ID", "DRUG_2_CONCEPT_ID",
+    "EVENT_CONCEPT_ID"
+  ), sep = ", ")
 neg_ctls_tbl$indicator <- 0
 
 # Concatenate positive and negative controls
