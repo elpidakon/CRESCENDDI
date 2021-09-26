@@ -20,7 +20,8 @@ for k=1:length(stats)
     curstat=stats{k};
     scores = table2array(union_clt_tbl(:,curstat));
     scores_cell = num2cell(scores);
-    [X,Y,T, AUC] = perfcurve(label_cell,scores_cell,1,'XVals', [0:0.05:1], 'Alpha',0.05, 'BootType', 'student');
+    [X,Y,T, AUC] = perfcurve(label_cell,scores_cell,1,'XVals', [0:0.05:1], ...
+    'Alpha',0.05, 'BootType', 'student');
     union_AUC_vector(k,:) = AUC;
 end
 
@@ -37,6 +38,7 @@ for k=1:length(stats)
     curstat=stats{k};
     scores = table2array(intersect_clt_tbl(:,curstat));
     scores_cell = num2cell(scores);
-    [X,Y,T, AUC] = perfcurve(label_cell,scores_cell,1,'XVals', [0:0.05:1], 'Alpha',0.05, 'BootType', 'student');
+    [X,Y,T, AUC] = perfcurve(label_cell,scores_cell,1,'XVals', [0:0.05:1], ...
+    'Alpha',0.05, 'BootType', 'student');
     intersect_AUC_vector(k,:) = AUC;
 end
