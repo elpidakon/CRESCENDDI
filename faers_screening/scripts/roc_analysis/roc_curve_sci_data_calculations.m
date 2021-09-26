@@ -23,7 +23,8 @@ label_cell = table2cell(label);
 
 scores = table2array(tbl(:, 'omega_025'));
 scores_cell = num2cell(scores);
-[Omega_X, Omega_Y, Omega_T, Omega_AUC] = perfcurve(label_cell, scores_cell, 1, 'XVals', [0:0.05:1]);
+[Omega_X, Omega_Y, Omega_T, Omega_AUC] = perfcurve(label_cell, scores_cell, ...
+1, 'XVals', [0:0.05:1]);
 
 % B. Delta
 pos_tbl = DR1_DELTA_VALUES(:, {'dde_tuple', 'Estimate'});
@@ -43,7 +44,8 @@ label_cell = table2cell(label);
 
 scores = table2array(tbl(:, 'Estimate'));
 scores_cell = num2cell(scores);
-[Delta_X, Delta_Y, Delta_T, Delta_AUC] = perfcurve(label_cell, scores_cell, 1, 'XVals', [0:0.05:1]);
+[Delta_X, Delta_Y, Delta_T, Delta_AUC] = perfcurve(label_cell, scores_cell, ...
+1, 'XVals', [0:0.05:1]);
 
 % C. Interaction Signal Score
 pos_tbl = DR1_INTSS_VALUES(:, {'datavar1', 'datavar2', 'dataIntSS', 'indicator'});
@@ -63,4 +65,5 @@ label_cell = table2cell(label);
 
 scores = table2array(tbl(:, 'dataIntSS'));
 scores_cell = num2cell(scores);
-[IntSS_X, IntSS_Y, IntSS_T, IntSS_AUC] = perfcurve(label_cell, scores_cell, 1, 'XVals', [0:0.05:1]);
+[IntSS_X, IntSS_Y, IntSS_T, IntSS_AUC] = perfcurve(label_cell, scores_cell, ...
+1, 'XVals', [0:0.05:1]);
