@@ -1,14 +1,21 @@
 -- Kontsioti, Maskell, Dutta & Pirmohamed, A reference set of clinically relevant adverse drug-drug interactions (2021)
-
 set search_path = drug_interaction_compendia;
+drop table if exists bnf_drug_pairs
+;
 
-drop table if exists bnf_drug_pairs;
 create table bnf_drug_pairs as
-select distinct ordered_drug_list from bnf_with_mapped_drugnames;
+select distinct
+    ordered_drug_list
+from
+    bnf_with_mapped_drugnames
+;
 
-alter table bnf_drug_pairs
-add column drug_1_concept_id integer,
-add column drug_2_concept_id integer;
+alter table bnf_drug_pairs add column drug_1_concept_id integer
+  , add column drug_2_concept_id                        integer
+;
 
-update bnf_drug_pairs
-set drug_1_concept_id = split_part(ordered_drug_list, '|', 1)::int, drug_2_concept_id = split_part(ordered_drug_list, '|', 2)::int;
+update
+    bnf_drug_pairs
+set drug_1_concept_id = split_part(ordered_drug_list, '|', 1)::int
+  , drug_2_concept_id = split_part(ordered_drug_list, '|', 2)::int
+;

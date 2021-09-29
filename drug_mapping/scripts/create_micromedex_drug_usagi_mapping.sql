@@ -2,17 +2,18 @@
 -- USAGI drug name mapping table for Micromedex
 -----------------------------------------------------------------------------------------------
 set search_path = drug_interaction_compendia;
+drop table if exists micromedex_drug_usagi_mapping
+;
 
-drop table if exists micromedex_drug_usagi_mapping;
 CREATE TABLE micromedex_drug_usagi_mapping
-(
-  source_code character varying,
-  source_concept_id character varying,
-  source_vocabulary_id character varying,
-  source_code_description character varying,
-  target_concept_id integer,
-  target_vocabulary_id character varying,
-  valid_start_date character varying,
-  valid_end_date character varying,
-  invalid_reason character varying
-)
+    (
+        source_code             character varying
+      , source_concept_id       character varying
+      , source_vocabulary_id    character varying
+      , source_code_description character varying
+      , target_concept_id       integer
+      , target_vocabulary_id    character varying
+      , valid_start_date        character varying
+      , valid_end_date          character varying
+      , invalid_reason          character varying
+    )
