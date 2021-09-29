@@ -16,7 +16,8 @@ proc sort data=work.test1 out=work.test1_sorted;
    by no;
 run;
 
-ods output ParameterEstimates=Output1;        /* the data set name is 'Output1' */
+/* the data set name is 'Output1' */
+ods output ParameterEstimates=Output1;        
 
 proc genmod data=work.test1_sorted; 
 class A B / param=ref ref=first; 
@@ -49,7 +50,8 @@ proc sort data=work.test2 out=work.test2_sorted;
    by no;
 run;
 
-ods output ParameterEstimates=Output2;        /* the data set name is 'Output2' */
+/* the data set name is 'Output2' */
+ods output ParameterEstimates=Output2;        
 
 proc genmod data=work.test2_sorted; 
 class A B / param=ref ref=first; 
