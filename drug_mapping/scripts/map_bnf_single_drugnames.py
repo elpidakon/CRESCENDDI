@@ -1,5 +1,7 @@
-# Kontsioti, Maskell, Dutta & Pirmohamed, A reference set of clinically relevant adverse drug-drug interactions (2021)
-# This script maps drug names from BNF ADR data to normalised OHDSI concepts (RxNorm/RxNorm Extension Ingredients)
+# Kontsioti, Maskell, Dutta & Pirmohamed, A reference set of clinically relevant
+# adverse drug-drug interactions (2021)
+# This script maps drug names from BNF ADR data to normalised OHDSI concepts
+# (RxNorm/RxNorm Extension Ingredients)
 
 import pandas as pd
 import numpy as np
@@ -23,7 +25,9 @@ import time
 # ### i. Data file loading
 
 # Import the extracted .csv file from web scraping
-bnf_side_effects_df = pd.read_csv('data_extraction/output/bnf_single_data.csv', dtype = str)
+bnf_side_effects_df = pd.read_csv(
+    "data_extraction/output/bnf_single_data.csv", dtype=str
+)
 # Convert to lowercase
 bnf_side_effects_df = bnf_side_effects_df.astype(str).apply(lambda x: x.str.lower())
 
@@ -31,10 +35,20 @@ bnf_side_effects_df = bnf_side_effects_df.astype(str).apply(lambda x: x.str.lowe
 
 # Import the USAGI drug mapping table:
 
-bnf_drug_mappings_df = pd.read_csv('drug_mapping/data/bnf_single_drugnames.csv', usecols = [3,4], index_col = 0, \
-                                  skiprows= 1, names = ['drug_source_name','drug_concept_id'], dtype = str)
+bnf_drug_mappings_df = pd.read_csv(
+    "drug_mapping/data/bnf_single_drugnames.csv",
+    usecols=[3, 4],
+    index_col=0,
+    skiprows=1,
+    names=["drug_source_name", "drug_concept_id"],
+    dtype=str,
+)
 
- # Use the drug mapping table to map drug names in the BNF side effects dataframe
-bnf_side_effects_mapped_df_a = pd.merge(bnf_side_effects_df, bnf_drug_mappings_df, left_on = 'Drug_name', right_index=True)
+# Use the drug mapping table to map drug names in the BNF side effects dataframe
+bnf_side_effects_mapped_df_a = pd.merge(
+    bnf_side_effects_df, bnf_drug_mappings_df, left_on="Drug_name", right_index=True
+)
 # Export to a .csv
-bnf_side_effects_mapped_df_a.to_csv('drug_mapping/output/bnf_single_with_mapped_drugnames.csv')
+bnf_side_effects_mapped_df_a.to_csv(
+    "drug_mapping/output/bnf_single_with_mapped_drugnames.csv"
+)

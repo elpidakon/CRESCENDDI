@@ -1,4 +1,5 @@
-# Kontsioti, Maskell, Dutta & Pirmohamed, A reference set of clinically relevant adverse drug-drug interactions (2021)
+# Kontsioti, Maskell, Dutta & Pirmohamed, A reference set of clinically relevant 
+# adverse drug-drug interactions (2021)
 # Code to extract single-drug side effect data from the BNF website
 
 from bs4 import BeautifulSoup
@@ -145,9 +146,11 @@ print('BNF drug class side effects succesfully scraped.')
 
 print('combine extracted data...')
 
-## Combine both tables by adding drug class side effects to the individual ingredients of each drug class.
+## Combine both tables by adding drug class side effects to the individual 
+## ingredients of each drug class.
 
-# Create a dictionary that contains all drug classes as keys and side effects with associated frequencies as values.
+# Create a dictionary that contains all drug classes as keys and side effects 
+# with associated frequencies as values.
 AEs_by_class_dict = scraped_class_dropna.groupby('Drug_Class')[['AE', 'Frequency']].apply(lambda g: list(map(tuple, g.values.tolist()))).to_dict()
 
 # Remove URL column
