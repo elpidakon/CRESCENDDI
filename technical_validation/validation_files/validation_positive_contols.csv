@@ -1,0 +1,41 @@
+,DRUG_1_CONCEPT_NAME,DRUG_2_CONCEPT_NAME,EVENT_CONCEPT_NAME,MDR_CODE,EVENT_SOURCE,BNF_SEV_LEVEL,ANSM_SEV_LEVEL,MICROMEDEX_SEV_LEVEL,BNF_EVID_LEVEL,MICROMEDEX_EVID_LEVEL
+3695,Fenoprofen,parecoxib,Hyperkalaemia,10020646,BNF,,Not recommended,Major,,Theoretical
+6688,nabumetone,Clopamide,Nephropathy toxic,10029155,Micromedex,Severe,Precautions for use,Major,Theoretical,Probable
+3846,Fluoxetine,Imipramine,Electrocardiogram QT prolonged,10014387,Micromedex,Severe,Precautions for use,Major,Study,Theoretical
+3369,Escitalopram,linezolid,Myoclonus,10028622,Micromedex,,Not recommended,Contraindicated,,Established
+3473,Etodolac,Chlorthalidone,Nephropathy toxic,10029155,Micromedex,Severe,Precautions for use,Major,Theoretical,Probable
+8587,Selegiline,Citalopram,Hypertension,10020772,Micromedex,,Take into consideration,Contraindicated,,Theoretical
+5551,Ketoprofen,Mefenamate,Hyperkalaemia,10020646,BNF,,Not recommended,Major,,Theoretical
+8105,Prednisone,Ritonavir,Cortisol decreased,10011198,Micromedex,Severe,Not recommended,Major,Study,Theoretical
+5107,Imipramine,Tiaprofenate,Haemorrhage,10055798,Micromedex,,Take into consideration,Major,,Established
+4962,Ibuprofen,quinapril,Renal impairment,10062237,Micromedex,,Precautions for use,Moderate,,Established
+7079,nilotinib,voriconazole,Electrocardiogram QT prolonged,10014387,BNF+Micromedex,Severe,Not recommended,Major,,Theoretical
+6513,Metoprolol,Amiodarone,Atrioventricular block,10003671,Micromedex,Severe,Precautions for use,Moderate,Study,Established
+3833,Fluoxetine,Epoprostenol,Haemorrhage,10055798,BNF+Micromedex,,Take into consideration,Major,,Theoretical
+6598,Morphine,Alfentanil,Respiratory depression,10038678,Micromedex,,Not recommended,Major,,Theoretical
+9530,tirofiban,Ibrutinib,Haemorrhage,10055798,BNF+Micromedex,,Precautions for use,Major,,Theoretical
+8835,Sotalol,Chlorthalidone,Hypotension,10021097,BNF,,Precautions for use,Major,,Probable
+2875,Droperidol,Indapamide,Electrocardiogram QT prolonged,10014387,Micromedex,Severe,Precautions for use,Major,Theoretical,Theoretical
+3501,Etodolac,eptifibatide,Haemorrhage,10055798,BNF+Micromedex,,Take into consideration,Major,,Theoretical
+6911,Naproxen,Etodolac,Hyperkalaemia,10020646,BNF,,Not recommended,Major,,Theoretical
+1555,Chlorpheniramine,tapentadol,Ileus paralytic,10021333,Micromedex,,Not recommended,Major,,Theoretical
+3570,Etodolac,tinzaparin,Haemorrhage,10055798,BNF+Micromedex,Severe,Not recommended,Major,Theoretical,Probable
+5832,Loxapine,clobazam,Respiratory depression,10038678,Micromedex,,Not recommended,Major,,Theoretical
+8132,Primidone,Meperidine,Depressed level of consciousness,10012373,Micromedex,,Not recommended,Major,,Theoretical
+9414,Theophylline,Pentoxifylline,Nausea,10028813,Micromedex,Severe,Precautions for use,Moderate,Study,Probable
+2517,Diltiazem,avanafil,Hypotension,10021097,BNF,,Take into consideration,Moderate,,Theoretical
+804,Atenolol,Prazosin,Hypotension,10021097,BNF,,Take into consideration,Moderate,,Probable
+2293,Diclofenac,candesartan,Renal impairment,10062237,Micromedex,,Precautions for use,Moderate,,Established
+7507,Pentamidine,Sulfamethoxazole,Torsade de pointes,10044066,Micromedex,,Not recommended,Major,,Theoretical
+5938,Loxapine,Trimeprazine,Respiratory depression,10038678,Micromedex,,Not recommended,Major,,Theoretical
+676,arsenic trioxide,crizotinib,Electrocardiogram QT prolonged,10014387,BNF+Micromedex,Severe,Contraindicated,Major,,Theoretical
+8854,Sotalol,Erythromycin,Electrocardiogram QT prolonged,10014387,BNF+Micromedex,Severe,Contraindicated,Major,,Theoretical
+5266,Indomethacin,eplerenone,Hyperkalaemia,10020646,BNF,,Precautions for use,Major,,Theoretical
+7783,Pimozide,Fentanyl,Depressed level of consciousness,10012373,Micromedex,,Not recommended,Major,,Theoretical
+2452,Digoxin,Chlorthalidone,Nausea,10028813,Micromedex,Severe,Precautions for use,Major,Study,Established
+9342,telmisartan,Tiaprofenate,Blood pressure increased,10005750,Micromedex,,Precautions for use,Moderate,,Established
+7362,Paroxetine,Clomipramine,Hyponatraemia,10021036,BNF,,Precautions for use,Major,,Theoretical
+4413,Furosemide,Gentamicin,Nephropathy toxic,10029155,BNF+Micromedex,Moderate,Precautions for use,Major,Study,Probable
+1160,Bumetanide,Ramipril,Orthostatic hypotension,10031127,Micromedex,,Precautions for use,Moderate,,Probable
+2692,Doxepin,aripiprazole,Hypotension,10021097,BNF,,Not recommended,Major,,Theoretical
+995,Betaxolol,fingolimod,Bradycardia,10006093,BNF+Micromedex,,Not recommended,Major,,Theoretical
