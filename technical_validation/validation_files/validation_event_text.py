@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 29 13:18:54 2021
-
-@author: Elpida
-"""
 # Technical Validation - Text description mapping for AEs
  
 # Read file
