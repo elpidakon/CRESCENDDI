@@ -1,11 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Sep 29 13:24:38 2021
-
-@author: Elpida
-"""
-
-# Tachnical validation - Controls
+# Technical validation - Controls
 
 import pandas as pd
 
