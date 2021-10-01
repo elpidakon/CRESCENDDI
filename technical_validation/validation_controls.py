@@ -18,5 +18,5 @@ pos_sample = pos_ctls.sample(n=40, random_state=1)
 neg_sample = neg_ctls.sample(n=40, random_state=1)
 
 # Export to .csv files
-pos_sample.to_csv("validation_positive_contols.csv")
-neg_sample.to_csv("validation_negative_contols.csv")
+pos_sample.to_csv("technical_validation/validation_files/validation_positive_contols.csv")
+neg_sample.to_csv("technical_validation/validation_files/validation_negative_contols.csv")
