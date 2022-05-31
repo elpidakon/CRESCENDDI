@@ -35,6 +35,7 @@ def omega_calculation(datafile, output):
             E_111 = g_11 * row["d1_d2_counter"]
             mu = stats.gamma.ppf(0.025, row["n_111"] + 0.5, scale=1 / (E_111 + 0.5))
             omega_025 = math.log2(mu)
+            df.loc[index, 'omega_025'] = omega_025
         else:
             df.loc[index, "omega_025"] = np.nan
     df.to_excel(output, index=False)
