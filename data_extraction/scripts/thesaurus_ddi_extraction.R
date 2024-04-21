@@ -72,16 +72,6 @@ thesaurus_data <- df_decompose %>%
 thesaurus_data$description_combined <-
   paste(thesaurus_data$description_interaction, thesaurus_data$mecanisme)
 
-# Drop columns that we don't need and rename remaining columns
-df_decompose_unique <- df_decompose_unique[-c(10, 14)]
-colnames(df_decompose_unique) <- c(
-  "interactant_1", "interactant_2",
-  "description_interaction", "description_medoc",
-  "mechanism", "CI", "AD", "PE", "PC", "drugname_1_original", 
-  "drugname_2_original", "severity", "description_blind", "description_combined"
-)
-
-
 # Keep only columns that we need and rename accordingly
 thesaurus_data <- thesaurus_data[c(11, 12, 15, 13)]
 colnames(thesaurus_data) <- c("drugname_1_original", "drugname_2_original", 
